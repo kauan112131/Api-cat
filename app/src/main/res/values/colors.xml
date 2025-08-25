@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="preto">#000000</color>
+    <color name="roxo">#9B5DE5</color>
+    <color name="cinza">#757575</color>
 </resources>

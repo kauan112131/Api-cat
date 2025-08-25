@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">gatos</string>
+    <string name="app_name">Gatos</string>    <string name="cat_image_description">Imagem de um gato</string>
+    <string name="load_random_cat">Carregar Gato Aleatório</string>
+    <string name="breed_hint">Digite o ID da raça (ex: beng)</string>
+    <string name="search_by_breed">Buscar por Raça</string>
+    <string name="carregar_gato">Carregar Gato</string>
+    <string name="descricao_gato">Imagem de gato</string>
+    <string name="digite_raca">Digite a raça</string>
+    <string name="pesquisar_raca">Pesquisar por raça</string>
 </resources>

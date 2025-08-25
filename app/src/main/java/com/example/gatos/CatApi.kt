@@ -1,10 +1,15 @@
 package com.example.gatos
-import com.example.gatos.CatResponse
+
 import retrofit2.http.GET
-import retrofit2.Call
+import retrofit2.http.Query
 
 interface CatApi {
-    @GET("v1/images/search?limit=1")
-    fun getRandomCat(): Call<List<CatUrlResponse>>
-}
+    @GET("images/search")
+    suspend fun getRandomCat(): List<CatResponse>
 
+    @GET("images/search")
+    suspend fun getCatByBreed(
+        @Query("breed_id") breedId: String,
+        @Query("api_key") apiKey: String
+    ): List<CatResponse>
+}

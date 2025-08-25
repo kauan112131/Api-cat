@@ -1,21 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp" >
+    android:background="@drawable/background_image"
+    tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/catImageView"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="16dp" />
-
-    <Button
-        android:id="@+id/loadCatButton"
-        android:layout_width="match_parent"
+    <!-- Caixa branca atrás do conteúdo -->
+    <LinearLayout
+        android:id="@+id/contentBox"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Carregar Gato aleatorio" />
-</LinearLayout>
+        android:background="#FFFFFF"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/catImageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/descricao_gato" />
+
+        <EditText
+            android:id="@+id/breedInput"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:hint="@string/digite_raca"
+            android:layout_marginTop="12dp"
+            android:inputType="text"
+            android:autofillHints="none"
+            android:textColor="@color/preto"
+            android:textColorHint="@color/cinza" />
+
+
+
+        <Button
+            android:id="@+id/searchBreedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/pesquisar_raca"
+            android:layout_marginTop="12dp" />
+
+
+        <Button
+            android:id="@+id/loadCatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/carregar_gato"
+            android:layout_marginTop="12dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
